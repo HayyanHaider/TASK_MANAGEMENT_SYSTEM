@@ -1,0 +1,170 @@
+/* src/assets/pages/developer/DeveloperDashboard.css */
+.developer-dashboard {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0B0C10, #1F2833);
+    color: #ffffff;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.developer-dashboard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(102, 252, 241, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.developer-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.developer-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.developer-dashboard-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #66FCF1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.developer-dashboard-tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.developer-dashboard-task-card {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.developer-dashboard-task-card:hover {
+    transform: translateY(-5px);
+}
+
+.developer-dashboard-task-title {
+    font-size: 1.5rem;
+    color: #66FCF1;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+}
+
+.developer-dashboard-task-details {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.developer-dashboard-task-status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: rgba(102, 252, 241, 0.1);
+    color: #66FCF1;
+    border: 1px solid rgba(102, 252, 241, 0.2);
+}
+
+.developer-dashboard-button {
+    background: transparent;
+    color: #66FCF1;
+    padding: 1rem 2rem;
+    border: 2px solid #66FCF1;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.developer-dashboard-button:hover {
+    background: #66FCF1;
+    color: #0B0C10;
+    transform: translateY(-2px);
+}
+
+.developer-dashboard-time-tracking {
+    background: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.developer-dashboard-time-tracking-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.developer-dashboard-time-tracking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.developer-dashboard-time-tracking-input {
+    background: #363636;
+    border: 1px solid #404040;
+    color: #ffffff;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.developer-dashboard-time-tracking-input:focus {
+    border-color: #4d4d4d;
+}
+
+.developer-dashboard-time-tracking-submit {
+    background-color: #404040;
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.developer-dashboard-time-tracking-submit:hover {
+    background-color: #4d4d4d;
+}
+
+@media (max-width: 768px) {
+    .developer-dashboard {
+        padding: 1rem;
+    }
+
+    .developer-dashboard-title {
+        font-size: 2rem;
+    }
+
+    .developer-dashboard-tasks {
+        grid-template-columns: 1fr;
+    }
+}
+  

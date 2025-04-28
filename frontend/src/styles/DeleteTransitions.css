@@ -1,0 +1,115 @@
+/* Delete Animation Styles */
+.delete-item {
+  position: relative;
+  transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  overflow: hidden;
+}
+
+/* Item being deleted */
+.delete-item-exit {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  max-height: 1000px; /* Large enough to contain content */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.delete-item-exit-active {
+  opacity: 0;
+  transform: scale(0.95) translateX(-20px);
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 0;
+}
+
+/* Fade and slide for list items */
+.delete-list-item-exit {
+  opacity: 1;
+  transform: translateX(0);
+  max-height: 100px;
+}
+
+.delete-list-item-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  max-height: 0;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card deletion effect */
+.delete-card-exit {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+  filter: brightness(1);
+}
+
+.delete-card-exit-active {
+  opacity: 0;
+  transform: scale(0.8) rotate(-3deg);
+  filter: brightness(0.7);
+  transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Project deletion (more dramatic) */
+.delete-project-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}
+
+.delete-project-exit-active {
+  opacity: 0;
+  transform: scale(0.9) translateY(-20px);
+  filter: blur(4px);
+  transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Task deletion */
+.delete-task-exit {
+  opacity: 1;
+  transform: translateX(0);
+  background: transparent;
+}
+
+.delete-task-exit-active {
+  opacity: 0;
+  transform: translateX(-30px);
+  background: rgba(255, 0, 0, 0.05);
+  transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtask deletion (quicker) */
+.delete-subtask-exit {
+  opacity: 1;
+  transform: translateX(0);
+  max-height: 60px;
+  margin: 8px 0;
+}
+
+.delete-subtask-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  max-height: 0;
+  margin: 0;
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Common fade out effect for any deletable item */
+.fade-out-delete {
+  animation: fadeOutDelete 600ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeOutDelete {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95) translateX(-20px);
+  }
+} 

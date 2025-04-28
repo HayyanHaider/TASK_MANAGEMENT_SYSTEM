@@ -1,0 +1,37 @@
+.route-slide-wrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0B0C10, #1F2833);
+  top: 0;
+  left: 0;
+  padding-top: 64px; /* navbar height */
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.slide-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: translateX(-30%);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+/* Ensure content is visible */
+.route-slide-wrapper > * {
+  height: 100%;
+  width: 100%;
+} 

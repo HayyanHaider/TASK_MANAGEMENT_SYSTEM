@@ -1,0 +1,181 @@
+/* src/styles/HomePage.css */
+.homepage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0B0C10, #1F2833);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px; /* Add padding to account for fixed navbar */
+}
+
+/* Main Content */
+.homepage-hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  min-height: calc(100vh - 64px); /* Adjust for navbar height */
+}
+
+.homepage-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+
+.homepage-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #66FCF1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+}
+
+.homepage-subtitle {
+  max-width: 800px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #C5C6C7;
+  opacity: 0.9;
+  margin: 0;
+  text-align: center;
+}
+
+.homepage-footer {
+  padding: 1rem;
+  text-align: center;
+  color: #C5C6C7;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Background Effects */
+.homepage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(102, 252, 241, 0.03), transparent 70%);
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homepage-content {
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.homepage-title {
+    font-size: 2.5rem;
+}
+
+.homepage-subtitle {
+  font-size: 1rem;
+}
+}
+
+/* Features Section */
+.homepage-features {
+  padding: 6rem 2rem;
+  background: rgba(31, 40, 51, 0.3);
+  position: relative;
+}
+
+.homepage-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.homepage-feature {
+  background: rgba(11, 12, 16, 0.6);
+  border: 1px solid rgba(102, 252, 241, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.homepage-feature:hover {
+  transform: translateY(-5px);
+  border-color: rgba(102, 252, 241, 0.4);
+}
+
+.homepage-feature-icon {
+  font-size: 2.5rem;
+  color: #66FCF1;
+  margin-bottom: 1.5rem;
+}
+
+.homepage-feature-title {
+  font-size: 1.5rem;
+  color: #66FCF1;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.homepage-feature-description {
+  color: #C5C6C7;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #66FCF1;
+  text-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+  text-align: center;
+  width: 100%;
+}
+
+p {
+  color: #ffffff;
+}
+
+/* Logo Message Animation */
+.homepage-logo-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(11, 12, 16, 0.9);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: 1px solid #66FCF1;
+  color: #66FCF1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+  animation: messageAppear 1s ease-in-out;
+  z-index: 1100;
+}
+
+@keyframes messageAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

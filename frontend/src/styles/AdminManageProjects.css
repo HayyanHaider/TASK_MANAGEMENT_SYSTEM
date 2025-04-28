@@ -1,0 +1,174 @@
+/* src/styles/AdminManageProjects.css */
+
+.admin-manage-projects {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0B0C10, #1F2833);
+    color: #ffffff;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-manage-projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(102, 252, 241, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.admin-manage-projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.admin-manage-projects-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #66FCF1;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.admin-manage-projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.admin-manage-projects-card {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.admin-manage-projects-card:hover {
+    transform: translateY(-5px);
+}
+
+.admin-manage-projects-card-title {
+    font-size: 1.5rem;
+    color: #66FCF1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+}
+
+.admin-manage-projects-card-content {
+    color: #ffffff;
+}
+
+.admin-manage-projects-text {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.admin-manage-projects-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.admin-manage-projects-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-manage-projects-label {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.admin-manage-projects-input,
+.admin-manage-projects-textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(11, 12, 16, 0.6);
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.admin-manage-projects-input:focus,
+.admin-manage-projects-textarea:focus {
+    outline: none;
+    border-color: #66FCF1;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+}
+
+.admin-manage-projects-button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.admin-manage-projects-button {
+    background: transparent;
+    color: #66FCF1;
+    padding: 1rem;
+    border: 2px solid #66FCF1;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.admin-manage-projects-button:hover {
+    background: #66FCF1;
+    color: #0B0C10;
+    transform: translateY(-2px);
+}
+
+.admin-manage-projects-button-delete {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+.admin-manage-projects-button-delete:hover {
+    background: #ff6b6b;
+    color: #ffffff;
+}
+
+.admin-manage-projects-error {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .admin-manage-projects {
+        padding: 1rem;
+    }
+
+    .admin-manage-projects-title {
+        font-size: 2rem;
+    }
+
+    .admin-manage-projects-list {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-manage-projects-card {
+        padding: 1.5rem;
+    }
+}
+  

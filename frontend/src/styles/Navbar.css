@@ -1,0 +1,431 @@
+/* src/styles/Navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(11, 12, 16, 0.95);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    padding: 0.2rem 0;
+}
+  
+.navbar-scrolled {
+    box-shadow: 0 2px 15px rgba(102, 252, 241, 0.1);
+}
+  
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+  
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.navbar-logo-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(11, 12, 16, 0.8);
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.2),
+                inset 0 0 8px rgba(102, 252, 241, 0.1);
+    padding: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 4px rgba(102, 252, 241, 0.4));
+    transition: all 0.3s ease;
+}
+
+.navbar-logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #C5C6C7;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.navbar-logo-accent {
+    color: #66FCF1;
+    margin-left: 0.25rem;
+    line-height: 1;
+}
+  
+.navbar-auth-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+  
+.navbar-link {
+    color: #C5C6C7;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-link:hover {
+    color: #66FCF1;
+    background: rgba(102, 252, 241, 0.1);
+}
+  
+.navbar-link-home {
+    color: #66FCF1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+  
+.navbar-link-home::before {
+    content: '🏠';
+    font-size: 1.1rem;
+}
+  
+.navbar-link-home:hover {
+    border-color: #66FCF1;
+}
+  
+.navbar-link-register,
+.navbar-link-logout {
+    border: 1px solid #66FCF1;
+    color: #66FCF1;
+}
+  
+.navbar-link-register:hover,
+.navbar-link-logout:hover {
+    background: rgba(102, 252, 241, 0.2);
+}
+  
+/* Logo Animation */
+.navbar-logo-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.3),
+                inset 0 0 12px rgba(102, 252, 241, 0.2);
+}
+
+.animate-logo .firework {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #66FCF1;
+    animation: firework 1s ease-out forwards;
+}
+
+.animate-logo .firework:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.animate-logo .firework:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes firework {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(15);
+        opacity: 0;
+    }
+}
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+  
+    .navbar-links {
+        gap: 1rem;
+    }
+  
+    .navbar-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .navbar-logo-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo-accent {
+        display: none;
+    }
+}
+
+/* Logo Message Animation */
+.logo-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(11, 12, 16, 0.9);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #66FCF1;
+    color: #66FCF1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+    animation: messageAppear 1s ease-in-out;
+    z-index: 1100;
+}
+
+@keyframes messageAppear {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Full Screen Animation */
+.animation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0B0C10;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInOut 2.5s ease-in-out forwards;
+}
+
+.animation-content {
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    animation: contentFade 2.3s ease-in-out forwards;
+}
+
+.animation-message {
+    color: #66FCF1;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(102, 252, 241, 0.5);
+    opacity: 0;
+    animation: messageAppear 2s ease-in-out forwards;
+}
+
+/* Enhanced Fireworks */
+.firework-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: containerFade 2s ease-in-out forwards;
+}
+
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: explode 1.5s ease-out forwards;
+}
+
+.firework:nth-child(1) {
+    top: 30%;
+    left: 30%;
+    background: #66FCF1;
+    animation-delay: 0.2s;
+}
+
+.firework:nth-child(2) {
+    top: 70%;
+    left: 70%;
+    background: #45A29E;
+    animation-delay: 0.4s;
+}
+
+.firework:nth-child(3) {
+    top: 40%;
+    left: 60%;
+    background: #C5C6C7;
+    animation-delay: 0.6s;
+}
+
+.firework:nth-child(4) {
+    top: 60%;
+    left: 40%;
+    background: #66FCF1;
+    animation-delay: 0.8s;
+}
+
+.firework:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    background: #45A29E;
+    animation-delay: 1s;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes contentFade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes containerFade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes messageAppear {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(30);
+        opacity: 0.8;
+    }
+    80% {
+        transform: scale(40);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(50);
+        opacity: 0;
+    }
+}
+
+/* Slide Page Transition */
+.slide-enter {
+  opacity: 0;
+  transform: translateX(100vw);
+  z-index: 1;
+}
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 400ms cubic-bezier(0.4,0,0.2,1), transform 400ms cubic-bezier(0.4,0,0.2,1);
+}
+.slide-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-exit-active {
+  opacity: 0;
+  transform: translateX(-60vw);
+  transition: opacity 400ms cubic-bezier(0.4,0,0.2,1), transform 400ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.route-slide-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}

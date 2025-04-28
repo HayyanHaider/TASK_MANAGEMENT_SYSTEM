@@ -1,0 +1,160 @@
+.developer-time-tracking {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0B0C10, #1F2833);
+    color: #ffffff;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.developer-time-tracking::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(102, 252, 241, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.developer-time-tracking-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.developer-time-tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.developer-time-tracking-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #66FCF1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.developer-time-tracking-form {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+.developer-time-tracking-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.developer-time-tracking-label {
+    display: block;
+    color: #66FCF1;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.developer-time-tracking-input {
+    width: 100%;
+    background: rgba(11, 12, 16, 0.6);
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.developer-time-tracking-input:focus {
+    outline: none;
+    border-color: #66FCF1;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+}
+
+.developer-time-tracking-button {
+    background: transparent;
+    color: #66FCF1;
+    padding: 1rem 2rem;
+    border: 2px solid #66FCF1;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.developer-time-tracking-button:hover {
+    background: #66FCF1;
+    color: #0B0C10;
+    transform: translateY(-2px);
+}
+
+.developer-time-tracking-list {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.developer-time-tracking-item {
+    background: rgba(11, 12, 16, 0.4);
+    border: 1px solid rgba(102, 252, 241, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.developer-time-tracking-item:hover {
+    transform: translateY(-2px);
+}
+
+.developer-time-tracking-date {
+    color: #66FCF1;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.developer-time-tracking-hours {
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.developer-time-tracking-description {
+    color: #e0e0e0;
+    font-size: 0.875rem;
+}
+
+.developer-time-tracking-error {
+    color: #ff6b6b;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .developer-time-tracking {
+        padding: 1rem;
+    }
+
+    .developer-time-tracking-title {
+        font-size: 2rem;
+    }
+
+    .developer-time-tracking-form,
+    .developer-time-tracking-list {
+        padding: 1.5rem;
+    }
+}
+  

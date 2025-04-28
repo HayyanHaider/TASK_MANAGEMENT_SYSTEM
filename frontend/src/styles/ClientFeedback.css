@@ -1,0 +1,213 @@
+/* Client Feedback Styles with Purple Theme */
+
+/* Container for the feedback section */
+.p-8 {
+    padding: 2rem;
+    background-color: #f7f7f7; /* Light background */
+  }
+  
+  /* Heading for Feedback Section */
+  .text-xl {
+    font-size: 1.25rem; /* 20px */
+    color: #6b46c1; /* Purple color */
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .text-purple-700 {
+    color: #6b46c1; /* Purple color for text */
+  }
+  
+  /* Card Styles */
+  .bg-purple-50 {
+    background-color: #faf5ff; /* Light purple background for the card */
+  }
+  
+  .space-y-3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Textarea styling */
+  textarea {
+    border: 1px solid #e2e8f0; /* Light gray border */
+    border-radius: 0.375rem; /* Rounded corners */
+    font-size: 1rem; /* 16px */
+    padding: 0.75rem; /* Padding for textarea */
+    width: 100%;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: #6b46c1; /* Purple border on focus */
+    box-shadow: 0 0 0 1px rgba(107, 70, 193, 0.5);
+  }
+  
+  /* Select input styling */
+  select {
+    padding: 0.5rem 1rem; /* Padding inside select */
+    border-radius: 0.375rem; /* Rounded corners */
+    border: 1px solid #e2e8f0; /* Light gray border */
+    background-color: white;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #6b46c1; /* Purple border on focus */
+    box-shadow: 0 0 0 1px rgba(107, 70, 193, 0.5);
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #6b46c1; /* Purple background */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem; /* Button padding */
+    font-size: 1rem; /* Button font size */
+    border-radius: 0.375rem; /* Rounded corners */
+  }
+  
+  button:hover {
+    background-color: #4c2d91; /* Darker purple on hover */
+  }
+  
+.client-feedback {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0B0C10, #1F2833);
+    color: #ffffff;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.client-feedback::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(102, 252, 241, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.client-feedback-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.client-feedback-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #66FCF1;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.client-feedback-form {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.client-feedback-label {
+    display: block;
+    color: #66FCF1;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.client-feedback-input,
+.client-feedback-textarea {
+    width: 100%;
+    background: rgba(11, 12, 16, 0.4);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 4px;
+    padding: 1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.client-feedback-input:focus,
+.client-feedback-textarea:focus {
+    outline: none;
+    border-color: #66FCF1;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+}
+
+.client-feedback-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.client-feedback-button {
+    background: transparent;
+    color: #66FCF1;
+    padding: 1rem;
+    border: 2px solid #66FCF1;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.client-feedback-button:hover {
+    background: #66FCF1;
+    color: #0B0C10;
+    transform: translateY(-2px);
+}
+
+.client-feedback-error {
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.client-feedback-success {
+    color: #66FCF1;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.client-feedback-loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #66FCF1;
+}
+
+@media (max-width: 768px) {
+    .client-feedback {
+        padding: 1rem;
+    }
+
+    .client-feedback-title {
+        font-size: 2rem;
+    }
+
+    .client-feedback-form {
+        padding: 1.5rem;
+    }
+}
+  

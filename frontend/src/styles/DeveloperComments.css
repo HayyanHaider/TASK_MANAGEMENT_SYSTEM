@@ -1,0 +1,166 @@
+.developer-comments {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0B0C10, #1F2833);
+    color: #ffffff;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.developer-comments::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(102, 252, 241, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.developer-comments-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.developer-comments-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #66FCF1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+    margin-bottom: 2rem;
+}
+
+.developer-comments-form {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+.developer-comments-textarea {
+    width: 100%;
+    min-height: 120px;
+    background: rgba(11, 12, 16, 0.6);
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.developer-comments-textarea:focus {
+    outline: none;
+    border-color: #66FCF1;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+}
+
+.developer-comments-button {
+    background: transparent;
+    color: #66FCF1;
+    padding: 1rem 2rem;
+    border: 2px solid #66FCF1;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.developer-comments-button:hover {
+    background: #66FCF1;
+    color: #0B0C10;
+    transform: translateY(-2px);
+}
+
+.developer-comments-list {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+.developer-comments-item {
+    background: rgba(11, 12, 16, 0.4);
+    border: 1px solid rgba(102, 252, 241, 0.1);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.developer-comments-item:hover {
+    transform: translateY(-2px);
+}
+
+.developer-comments-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.developer-comments-item-author {
+    color: #66FCF1;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.developer-comments-item-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.developer-comments-item-content {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.developer-comments-error {
+    color: #ff4d4d;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.developer-comments-success {
+    color: #66FCF1;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(102, 252, 241, 0.1);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .developer-comments {
+        padding: 1rem;
+    }
+
+    .developer-comments-title {
+        font-size: 2rem;
+    }
+
+    .developer-comments-form,
+    .developer-comments-list {
+        padding: 1.5rem;
+    }
+}
+  

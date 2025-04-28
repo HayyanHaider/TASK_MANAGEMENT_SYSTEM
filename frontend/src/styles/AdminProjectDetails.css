@@ -1,0 +1,185 @@
+/* src/styles/AdminProjectDetails.css */
+
+.admin-project-details {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0B0C10, #1F2833);
+    color: #ffffff;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-project-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(102, 252, 241, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.admin-project-details-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.admin-project-details-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #66FCF1;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.admin-project-details-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #66FCF1;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(102, 252, 241, 0.3);
+}
+
+.admin-project-details-card,
+.admin-project-details-task-card {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.admin-project-details-card:hover,
+.admin-project-details-task-card:hover {
+    transform: translateY(-5px);
+}
+
+.admin-project-details-card-title,
+.admin-project-details-task-title {
+    font-size: 1.5rem;
+    color: #66FCF1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+}
+
+.admin-project-details-text {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.admin-project-details-text strong {
+    color: #66FCF1;
+    font-weight: 600;
+}
+
+.admin-project-details-tasks {
+    display: grid;
+    gap: 2rem;
+}
+
+.admin-project-details-subtasks {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(102, 252, 241, 0.2);
+}
+
+.admin-project-details-subtasks-title {
+    font-size: 1.3rem;
+    color: #66FCF1;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+}
+
+.admin-project-details-subtask-card {
+    background: rgba(11, 12, 16, 0.4);
+    border: 1px solid rgba(102, 252, 241, 0.1);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin-project-details-subtask-title {
+    font-size: 1.1rem;
+    color: #66FCF1;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 3px rgba(102, 252, 241, 0.3);
+}
+
+.admin-project-details-button {
+    background: transparent;
+    color: #66FCF1;
+    padding: 1rem;
+    border: 2px solid #66FCF1;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.admin-project-details-button:hover {
+    background: #66FCF1;
+    color: #0B0C10;
+    transform: translateY(-2px);
+}
+
+.admin-project-details-loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #66FCF1;
+}
+
+.admin-project-details-error {
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.admin-project-details-no-tasks {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .admin-project-details {
+        padding: 1rem;
+    }
+
+    .admin-project-details-title {
+        font-size: 2rem;
+    }
+
+    .admin-project-details-subtitle {
+        font-size: 1.75rem;
+    }
+
+    .admin-project-details-card,
+    .admin-project-details-task-card {
+        padding: 1.5rem;
+    }
+
+    .admin-project-details-card-title,
+    .admin-project-details-task-title {
+        font-size: 1.3rem;
+    }
+}
+  

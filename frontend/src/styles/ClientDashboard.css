@@ -1,0 +1,342 @@
+/* Client Dashboard Styles with Purple Theme */
+
+/* Container for the entire dashboard */
+.p-8 {
+    padding: 2rem;
+    background-color: #f7f7f7; /* Light background */
+  }
+  
+  /* Heading for the dashboard */
+  .text-3xl {
+    font-size: 1.875rem; /* 30px */
+    color: #6b46c1; /* Purple color */
+    font-weight: bold;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem; /* 24px */
+  }
+  
+  /* Styles for the grid layout */
+  .grid {
+    display: grid;
+  }
+  
+  .gap-6 {
+    gap: 1.5rem; /* 24px */
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Card Styles */
+  .hover\:shadow-xl {
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .hover\:shadow-xl:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transition-all {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  /* Card Header Styles */
+  .text-xl {
+    font-size: 1.25rem; /* 20px */
+    color: #4c2c92; /* Darker Purple */
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem; /* 8px */
+  }
+  
+  /* Card Content Styles */
+  .space-y-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-gray-700 {
+    color: #4a5568; /* Dark Gray */
+  }
+  
+  .text-sm {
+    font-size: 0.875rem; /* 14px */
+  }
+  
+  .mt-4 {
+    margin-top: 1rem; /* 16px */
+  }
+  
+  .text-gray-500 {
+    color: #6b7280; /* Medium Gray */
+  }
+  
+  .text-xs {
+    font-size: 0.75rem; /* 12px */
+  }
+  
+  .text-gray-400 {
+    color: #cbd5e0; /* Light Gray */
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem; /* 8px */
+  }
+  
+  /* Button Styles */
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .text-purple-600 {
+    color: #6b46c1; /* Purple color */
+  }
+  
+  .bg-purple-600 {
+    background-color: #6b46c1; /* Purple background */
+  }
+  
+  .bg-purple-600:hover {
+    background-color: #55308c; /* Darker purple on hover */
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  /* Custom Progress Bar styles */
+  .progress-bar-container {
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    border-radius: 9999px;
+  }
+  
+  .progress-bar-filled {
+    background-color: #6b46c1; /* Purple color */
+    width: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+.client-dashboard {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0B0C10, #1F2833);
+    color: #ffffff;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.client-dashboard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(102, 252, 241, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.client-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.client-dashboard-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #66FCF1;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.client-dashboard-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #66FCF1;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(102, 252, 241, 0.3);
+}
+
+.client-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.client-dashboard-card {
+    background: rgba(31, 40, 51, 0.5);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.client-dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.client-dashboard-card-title {
+    font-size: 1.5rem;
+    color: #66FCF1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+}
+
+.client-dashboard-text {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.client-dashboard-text strong {
+    color: #66FCF1;
+    font-weight: 600;
+}
+
+.client-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.client-dashboard-stat {
+    background: rgba(11, 12, 16, 0.4);
+    border: 1px solid rgba(102, 252, 241, 0.1);
+    border-radius: 6px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.client-dashboard-stat-number {
+    font-size: 2rem;
+    color: #66FCF1;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+}
+
+.client-dashboard-stat-label {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.client-dashboard-button {
+    background: transparent;
+    color: #66FCF1;
+    padding: 1rem;
+    border: 2px solid #66FCF1;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.client-dashboard-button:hover {
+    background: #66FCF1;
+    color: #0B0C10;
+    transform: translateY(-2px);
+}
+
+.client-dashboard-loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #66FCF1;
+}
+
+.client-dashboard-error {
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .client-dashboard {
+        padding: 1rem;
+    }
+
+    .client-dashboard-title {
+        font-size: 2rem;
+    }
+
+    .client-dashboard-subtitle {
+        font-size: 1.75rem;
+    }
+
+    .client-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .client-dashboard-card {
+        padding: 1.5rem;
+    }
+
+    .client-dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
